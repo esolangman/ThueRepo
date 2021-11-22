@@ -1,0 +1,56 @@
+//::=A means command 0
+//::=B means command 10
+//::=C means command 11
+//::=R means return command back to the program or reset the pointer
+//::=r means reset the pointer, but with a leading 1
+//::=^ is instruction pointer
+//::=^W is instruction pointer waiting for instruction completion
+//::=. seperates progam and data
+
+
+PM::=~Input the Program
+input-::=:::
+0-.::=0.inputDM-
+1-.::=1.inputDM-
+DM::=~Input the Data
+
+
+
+^0::=0^WA
+^10::=10^WB
+^11::=11^WC
+^1.::=r.
+
+A0::=0A
+A1::=1A
+A.0::=R.
+A.1::=R.
+
+B0::=0B
+B1::=1B
+B.::=.B
+Bz::=R0z
+
+C0::=0C
+C1::=1C
+C.::=.C
+Cz::=R1z
+
+1R::=R1
+0R::=R0
+.R::=R.
+
+1r::=r1
+0r::=r0
+
+WR::=
+
+
+^.::=R.
+aR::=a^
+
+ar::=a^1
+
+
+::=
+a^inputPM--.z

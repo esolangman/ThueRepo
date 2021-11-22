@@ -1,0 +1,4 @@
+a::=~Heads
+a::=~Tails
+::=
+a
